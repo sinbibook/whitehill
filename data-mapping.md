@@ -373,7 +373,8 @@ A형은 `index.gallery` 를 안 써서 헤더 로고 칸으로 빌린다. 이 �
 | `data-footer-representative`  | 대표자 `<span>`                    | `property.businessInfo.representativeName`                                |
 | `data-footer-business-number` | 사업자번호 `<span>`                | `property.businessInfo.businessNumber`                                    |
 | `.privacy` (첫 번째)          | 개인정보처리방침 `<a>`             | 정적 — `http://design.trip11.net/privacy/privacy_policy.html` (원본과 동일) |
-| `data-ybs-button`             | 야놀자 YBS `<a>`                   | `property.ybsId` (없으면 YBS `.privacy` 박스만 숨김)                      |
+| `data-ybs-button`             | 야놀자 YBS `<a>` (푸터) · 헤더 YBS 버튼 · aside YBS 아이콘 | `property.ybsId` (없으면 숨김). 헤더 버튼은 다른 헤더 버튼처럼 스크롤 헤더(`.header.on`)에서만 보인다 — 원본 gagopaps.kr 배치. aside 아이콘은 `images/reser_w.png`(gagopaps 원본) |
+| `data-ybs-wrap`               | 헤더 `.btn_hd_res.ybs` · aside `li` | YBS 없으면 래퍼째 숨김(기본 숨김)                                        |
 | `data-booking-link`           | `.ft_btn_reserve` 실시간 예약 버튼 | `property.realtimeBookingId`                                              |
 | `.copy`                       | 카피라이트 문구                    | `property.tripProviderName` → 없으면 정적 문구                    |
 

@@ -139,10 +139,12 @@
   };
 
   // MAPPER: property.ybsId → [data-ybs-button] (없으면 숨김)
+  // 푸터 「야놀자 YBS」 + 헤더(스크롤 헤더) 버튼 + aside 하단 아이콘 (원본 gagopaps.kr 배치).
+  // 헤더·aside 는 [data-ybs-wrap] 째 숨기고, 값이 있으면 인라인 숨김만 풀어 CSS 가 노출을 정한다.
   HeaderFooterMapper.prototype.mapYbs = function () {
     var ybsId = this.getProperty().ybsId;
     document.querySelectorAll('[data-ybs-button]').forEach(function (el) {
-      var host = el.closest('.privacy') || el;
+      var host = el.closest('[data-ybs-wrap]') || el.closest('.privacy') || el;
       if (!ybsId) {
         host.style.display = 'none';
         return;
